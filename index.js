@@ -1,7 +1,7 @@
-const core = require('@actions/core');
-const fetch = require('node-fetch');
+import core from '@actions/core';
+import fetch from 'node-fetch';
 
-async function run() {
+export async function run() {
   try {
     const url = core.getInput('url');
     const method = core.getInput('method');
@@ -20,8 +20,8 @@ async function run() {
       throw new Error(`Request failed with status: ${response.status}`);
     }
 
-    const responseData = await response.text();
-    core.setOutput('response', responseData);
+    const responseData = await response.json();
+    core.setOutput('response', JSON.stringify(responseData));
 
   } catch (error) {
     core.setFailed(`Action failed with error: ${error.message}`);
