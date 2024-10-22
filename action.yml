@@ -15,5 +15,4 @@ outputs:
     description: 'The result of the HTTP request'
 runs:
   using: 'node12'
-  main: 'index.js'
-  pre: 'npm install'
+  main: 'dist/index.js'
