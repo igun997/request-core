@@ -1,0 +1,13 @@
+{
+  "name": "request-core",
+  "version": "1.0.0",
+  "description": "A GitHub Action to send HTTP requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@actions/core": "^1.9.0",
+    "node-fetch": "^3.0.0"
+  }
+}

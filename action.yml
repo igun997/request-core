@@ -1,0 +1,18 @@
+name: 'Request Core'
+description: 'Send an HTTP request to a URL'
+inputs:
+  url:
+    description: 'URL to send the request to'
+    required: true
+  method:
+    description: 'HTTP method'
+    required: true
+  headers:
+    description: 'Custom headers'
+    required: false
+outputs:
+  result:
+    description: 'The result of the HTTP request'
+runs:
+  using: 'node12'
+  main: 'index.js'
